@@ -1,4 +1,4 @@
-// Activity: Destructuring Practice — What Your Code Should Do
+// Activity: Destructuring Practice
 const fruits = ["apple", "banana", "cherry"]
 
 const [firstFruit, secondFruit, thirdFruit] = fruits
@@ -13,11 +13,11 @@ const car = {
   year: 2020
 }
 
-const { make, model, year } = car
+const { make: carMake, model: carModel, year: carYear } = car;
 
-console.log(make) // Output: "Toyota"
-console.log(model) // Output: "Camry"
-console.log(year) // Output: 2020
+console.log(carMake);
+console.log(carModel);
+console.log(carYear);
 
 const colors = ["red"];
 
@@ -31,7 +31,7 @@ console.log(primaryColor); // Output: "red"
 console.log(secondaryColor); // Output: "green"
 console.log(tertiaryColor); // Output: "blue"
 
-//Additional Practice — Nested Object Destructuring
+
 
 const user = {
   name: "Blessing",
@@ -55,3 +55,38 @@ console.log(userName);
 console.log(userAge);
 console.log(userCity);
 console.log(userZip);
+
+const person = {
+  name: "Alex"
+};
+
+const {
+  name: personName,
+  age: personAge = 25
+} = person;
+
+console.log(personName);
+console.log(personAge);
+
+const numbers = [1, [2, 3], 4];
+
+const [first, [second, third], fourth] = numbers;
+
+console.log(first);
+console.log(second);
+console.log(third);
+console.log(fourth);
+
+// Additional Practice — Destructuring in Function Parameters
+
+function displayBook({ title, author, year }) {
+  console.log(`${title} by ${author}, published in ${year}`);
+}
+
+const book = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  year: 1937
+};
+
+displayBook(book);
