@@ -1,3 +1,4 @@
+// Activity: Destructuring Practice — What Your Code Should Do
 const fruits = ["apple", "banana", "cherry"]
 
 const [firstFruit, secondFruit, thirdFruit] = fruits
@@ -29,6 +30,8 @@ const [
 console.log(primaryColor); // Output: "red"
 console.log(secondaryColor); // Output: "green"
 console.log(tertiaryColor); // Output: "blue"
+
+//Additional Practice — Nested Object Destructuring
 
 const user = {
   name: "Blessing",
